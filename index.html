@@ -23,7 +23,7 @@
     <div id="thumbnails">
       <a href="#" id="arrow-up" class="arrow" @click="prev">&uparrow;</a>
       <div v-for="(slide, index) in slideArr">
-        <img :src="slide.image" alt="" :class="thumbnailActive(index)">
+        <img :src="slide.image" alt="" :class="thumbnailActive(index)" @click="viewThumbnail(index)">
       </div>
       <a href="#" id="arrow-down" class="arrow" @click="next">&downarrow;</a>
     </div>
