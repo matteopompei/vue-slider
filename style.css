@@ -31,6 +31,7 @@ img {
 .content {
   width: 100%;
   position: relative;
+  display: none;
 }
 
 .active {

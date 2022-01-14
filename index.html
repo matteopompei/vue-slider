@@ -11,7 +11,7 @@
   <div id="container">
     
     <div id="slideshow">
-      <div class="content" v-for="(slide, index) in slideArr">
+      <div v-for="(slide, index) in slideArr" class="content" :class="active(index)">
         <div class="text">
           <h2>{{slide.title}}</h2>
           <p>{{slide.text}}</p>

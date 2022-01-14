@@ -29,5 +29,13 @@ let app = new Vue ({
         text: "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,"
       }
     ]
+  },
+  methods: {
+    active: function(slideIndex) {
+      if(slideIndex == this.corrente) {
+        return "active";
+      }
+      return "";
+    }
   }
 });
