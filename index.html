@@ -11,18 +11,20 @@
   <div id="container">
     
     <div id="slideshow">
-      <div class="content">
+      <div class="content" v-for="(slide, index) in slideArr">
         <div class="text">
-          <h2>TITOLO</h2>
-          <p>TESTO</p>
+          <h2>{{slide.title}}</h2>
+          <p>{{slide.text}}</p>
         </div>
-        <img src="img/01.jpg" alt="">
+        <img :src="slide.image" alt="">
       </div>
     </div>
     
     <div id="thumbnails">
       <a href="#" id="arrow-up" class="arrow">&uparrow;</a>
-      <img src="img/01.jpg" alt="">
+      <div v-for="(slide, index) in slideArr">
+        <img :src="slide.image" alt="">
+      </div>
       <a href="#" id="arrow-down" class="arrow">&downarrow;</a>
     </div>
 
