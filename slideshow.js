@@ -36,6 +36,18 @@ let app = new Vue ({
         return "active";
       }
       return "";
+    },
+    next: function() {
+      this.corrente ++;
+      if(this.corrente == this.slideArr.length) {
+        this.corrente = 0;
+      }
+    },
+    prev: function() {
+      this.corrente --;
+      if(this.corrente < 0) {
+        this.corrente = this.slideArr.length - 1;
+      }
     }
   }
 });

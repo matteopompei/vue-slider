@@ -21,11 +21,11 @@
     </div>
     
     <div id="thumbnails">
-      <a href="#" id="arrow-up" class="arrow">&uparrow;</a>
+      <a href="#" id="arrow-up" class="arrow" @click="prev">&uparrow;</a>
       <div v-for="(slide, index) in slideArr">
         <img :src="slide.image" alt="">
       </div>
-      <a href="#" id="arrow-down" class="arrow">&downarrow;</a>
+      <a href="#" id="arrow-down" class="arrow" @click="next">&downarrow;</a>
     </div>
 
   </div>
