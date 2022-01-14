@@ -37,6 +37,12 @@ let app = new Vue ({
       }
       return "";
     },
+    thumbnailActive: function(slideIndex) {
+      if(slideIndex == this.corrente) {
+        return "thumbnail-active";
+      }
+      return "";
+    },
     next: function() {
       this.corrente ++;
       if(this.corrente == this.slideArr.length) {

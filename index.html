@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>js-array-carousel</title>
+  <title>vue-slider</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
     <div id="thumbnails">
       <a href="#" id="arrow-up" class="arrow" @click="prev">&uparrow;</a>
       <div v-for="(slide, index) in slideArr">
-        <img :src="slide.image" alt="">
+        <img :src="slide.image" alt="" :class="thumbnailActive(index)">
       </div>
       <a href="#" id="arrow-down" class="arrow" @click="next">&downarrow;</a>
     </div>
