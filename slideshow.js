@@ -57,6 +57,13 @@ let app = new Vue ({
     },
     viewThumbnail: function(slideIndex) {
       this.corrente = slideIndex;
+    },
+    play: function() {
+      setInterval(this.next, 3000);
     }
-  }
+  },
+  created:
+    function() {
+      this.play();
+    }
 });
