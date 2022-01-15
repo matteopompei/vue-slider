@@ -28,7 +28,8 @@ let app = new Vue ({
         title: "Paradise",
         text: "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,"
       }
-    ]
+    ],
+    scorri: null
   },
   methods: {
     active: function(slideIndex) {
@@ -59,10 +60,13 @@ let app = new Vue ({
       this.corrente = slideIndex;
     },
     play: function() {
-      setInterval(this.next, 3000);
+      this.scorri = setInterval(this.next, 3000);
+    },
+    stop: function() {
+      clearInterval(this.scorri);
     }
   },
-  created:
+  mounted:
     function() {
       this.play();
     }
